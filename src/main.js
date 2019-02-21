@@ -17,24 +17,31 @@ document.getElementById('orderBy').classList.add('display_block');
 });
 
 
-
+const containerRoot = document.getElementById('root');
 
 //-----------------------------filtara------------------------------------------
 
 //hago mi variable de selectType para cargar mi selector ID de html
 const selectType =document.getElementById('bicho');
 //creo mi funcion donde cuando cambie la opcion de mi selector filtre los pokemones.
-selectType.addEventListener('click', function(showPokemons)  {
+selectType.addEventListener('click',()=>{
   //creo variable donde evalua el cambio del selector.
   let condition = selectType.value;
   /*creo una variable donde obtiene la funcion de filtrar.
   donde le estoy mandando mis datos y mi condicion del selector.*/
   let filtered = window.allPokemon.filterType(data, condition);
+  const result "";
   console.log(filtered);
+    filtered.forEach(element => {
+    result = containerRoot.innerHTML +=
+  `<div>
+    <img class="activator caja-pokemon" src="${element.img}">
+  </div>`
+});
 });
 
 
-document.getElementById('buttonRegister').addEventListener('click', showPokemons);
+
 
 function fillElement (data, activeElem){
   for(let i=0; i<data.length; i++){
