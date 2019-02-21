@@ -16,10 +16,34 @@
     <div id="hiUser" class="hiUser">
       <h1 id="hi"></h1>
     </div>
-    <!--contenedor de imagenes-->
-    <div id="card" class="card">
-    <div id= "contenedor">
-    </div>
+    <div id ="imagenes" class="contenedor">
+    </div>  
+  <!--selector de tipo de pokemon-->
+  <from class="type">
+    <select id="pokeType">
+      <option value="0" disabled selected>Seleccionar por tipo</option>
+      <!--<option value="Bug">Bicho</option>-->
+      <option value="Dragon">Dragón</option>
+      <option value="Grass">Planta</option>
+      <option value="Ground">Tierra</option>
+      <option value="Fighting">Lucha</option>
+      <option value="Rock">Roca</option>
+      <option value="Ice">Hielo</option>
+      <option value="Flying">Volador</option>
+      <option value="Fairy">Hada</option>
+      <option value="Ghost">Fantasma</option>
+      <option value="Electric">Eléctrico</option>
+    </select>
+  </from>
+
+<button id="bicho" class="bicho" value="Bug">Bicho</button>
+
+  <div class="orderBy">
+    <select id="orderBy">
+      <option value="" disabled selected>Ordenar por</option>
+      <option value="a-z">A-Z</option>
+      <option value="z-a">Z-A</option>
+    </select>
   </div>
      <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>

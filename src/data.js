@@ -9,16 +9,16 @@
 //const infoPokemon = window.POKEMON.pokemon;
 
 //let list=[];
-document.getElementById('buttonRegister').addEventListener('click', showPokemons);
+/*document.getElementById('buttonRegister').addEventListener('click', showPokemons);
 function fillElement (infoPokemon, activeElem){
 
     for(let i=0; i<infoPokemon.length; i++){
 
          let newDiv=document.createElement("div");
-         newDiv.className ="pictures";
+         newDiv.className ="contenedor";
          newDiv.innerHTML = "<img src=\"" +infoPokemon[i].img+ "\">";
          activeElem.insertAdjacentElement("beforeend", newDiv);
-         
+
        };
     };
 
@@ -26,7 +26,72 @@ function showPokemons(){
   let infoPokemon = POKEMON.pokemon;
   let divPokemonList = document.getElementById("contenedor");
   fillElement(infoPokemon,divPokemonList);
-};
+};*/
+window.allPokemon = {
+  //creo mi funcion de filtrado, donde coloco los parametros de data
+  // y condition que estan declarados en mi main.
+  filterType: (data, condition) => {
+    //se crea una variable donde le hago una funcion de los datos con un filter
+    //le pongo el argumento element.
+    const filteredType = data.filter(element => {
+      /*retorno mi element.type(que es el tipo de mi pokemon).junto con el
+      metodo indexOf, donde le paso mi condition donde esta evaluando mi selector del html.
+      retorna el primer índice en el que se puede encontrar un elemento
+      dado en el array, ó retorna -1 si el elemento no esta presente.*/
+      return element.type.indexOf(condition) > -1
+    })
+    //como function retorna mi filteredType.
+    return filteredType;
+  },
+  //creo mi funcion de ordenado. le paso mis parametros data y sortBy
+  //que estan en mi main.js
+  sortData: (data, sortBy) => {
+    /* console.log(data, sortOrder);
+hago dos condicionales donde si mi en mi primera
+condicion selecion es a-z*/
+    if (sortBy == 'a-z') {
+/*me retorna los datos con mi .sort
+en la cual creo una funcion con los parametros a,b.
+en ella creo otras dos condicionales*/
+        return data.sort((a, b) => {
+      //si  a.name(data) es mayor b.name(data)
+        if (a.name > b.name) {
+          //retorna 1
+          return 1;
+        }
+        //si a.name es menor b.name
+        if (a.name < b.name) {
+          //retorna menos 1
+          return -1;
+        }
 
+        return 0;
+      });
+    }
+    /* console.log(data, sortOrder);
+    hago dos condicionales donde si mi en mi primera
+    condicion selecion es z-a*/
+    if (sortBy == 'z-a') {
+      /*me retorna los datos con mi .sort
+      en la cual creo una funcion con los parametros a,b.
+      en ella creo otras dos condicionales*/
+      return data.sort((a, b) => {
+        //si  a.name(data) es menor b.name(data)
+        if (a.name < b.name) {
+          //retorna 1
+          return 1;
+        }
+        //si  a.name(data) es mayor b.name(data)
+        if (a.name > b.name) {
+          //retorna 1
+          return -1;
+        }
+        return 0;
+      });
+    }
+  },
 
-//console.log(fillElement);
+  computeStats: (filtered) => {
+    return filtered.length;
+  }
+}

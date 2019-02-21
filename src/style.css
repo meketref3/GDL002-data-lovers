@@ -1,0 +1,12 @@
+
+.contenedor{
+display:inline;
+}
+
+.display_none {
+    display: none;
+}
+
+.display_block {
+    display: block;
+}
