@@ -1,7 +1,6 @@
 
-.card{
-width:100px;
-height:140px;
+.contenedor{
+display:inline;
 }
 
 .display_none {

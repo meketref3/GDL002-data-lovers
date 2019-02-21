@@ -17,41 +17,38 @@ document.getElementById('orderBy').classList.add('display_block');
 });
 
 
-document.getElementById('buttonRegister').addEventListener('click', showPokemons);
-function fillElement (infoPokemon, activeElem){
-
-    for(let i=0; i<infoPokemon.length; i++){
-
-         let newDiv=document.createElement("div");
-         newDiv.className ="contenedor";
-         newDiv.innerHTML = "<img src=\"" +infoPokemon[i].img+ "\">";
-         activeElem.insertAdjacentElement('beforeend', newDiv);
-
-       };
-
-    };
-
-function showPokemons(){
-  let infoPokemon = POKEMON.pokemon;
-  let divPokemonList = document.getElementById("contenedor");
-  fillElement(infoPokemon,divPokemonList);
-};
 
 
+//-----------------------------filtara------------------------------------------
 
-//filtara
 //hago mi variable de selectType para cargar mi selector ID de html
-const selectType = document.getElementById('pokeType');
+const selectType =document.getElementById('bicho');
 //creo mi funcion donde cuando cambie la opcion de mi selector filtre los pokemones.
-selectType.addEventListener('change', () => {
+selectType.addEventListener('click', function(showPokemons)  {
   //creo variable donde evalua el cambio del selector.
   let condition = selectType.value;
-  //creo una variable donde obtiene la funcion de filtrar. donde le estoy mandando mis datos y mi condicion del selector.
+  /*creo una variable donde obtiene la funcion de filtrar.
+  donde le estoy mandando mis datos y mi condicion del selector.*/
   let filtered = window.allPokemon.filterType(data, condition);
   console.log(filtered);
-  //let countType = window.allPokemon.computeStats(filtered);
-
 });
+
+
+document.getElementById('buttonRegister').addEventListener('click', showPokemons);
+
+function fillElement (data, activeElem){
+  for(let i=0; i<data.length; i++){
+    let newDiv=document.createElement("div");
+    newDiv.className ="contenedor";
+    newDiv.innerHTML = "<img src=\"" +data[i].img+ "\">";
+    activeElem.insertAdjacentElement('beforeend', newDiv);
+  };
+};
+
+function showPokemons(){
+  let divPokemonList = document.getElementById("imagenes");
+  fillElement(data,divPokemonList);
+};
 
 //ordenara
 //hago mi variable de selectOrder para cargar mi selector de id de html
