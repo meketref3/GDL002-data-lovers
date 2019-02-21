@@ -1,0 +1,13 @@
+
+.card{
+width:100px;
+height:140px;
+}
+
+.display_none {
+    display: none;
+}
+
+.display_block {
+    display: block;
+}
