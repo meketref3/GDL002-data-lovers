@@ -10,3 +10,6 @@ display:inline-block;
 .display_block {
     display: block;
 }
+.hidden {
+    display:none;
+}

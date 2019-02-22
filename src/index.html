@@ -8,44 +8,53 @@
   <body>
     <section id="root"></section>
     <!-- bloque de registro-->
-    <div id="useRegister" class="useRegister">
+    <div id="useRegister" >
+      <p>Bienvenidx Pokeuser, en esta web podrás conocer algunos datos sobre los Pokemon de la región de Kanto.
+        <br>
+        Por favor Ingresa tu nombre para continuar:
+      </p>
       <input type="text" id="user" class="user" placeholder="Nombre de usuario."/>
       <button id="buttonRegister" class="buttonRegister"></button>
     </div>
     <!--bloque de nombre-->
-    <div id="hiUser" class="hiUser">
+    <div id="selectType" class="hidden">
       <h1 id="hi"></h1>
+      <p>Por favor elige que tipo de Pokemón deseas ver:</p>
     </div>
-<!--selector de tipo de pokemon-->
-    <div  id ="buttonsType" class ="buttons">
-        <button  class="pokeType" value="Bug"><img alt="" src="botones/bug.png" width="100"/></button>
-        <button class="pokeType" value="Dragon"></button>
-        <button  class="pokeType" value="Grass"></button>
-        <button class="pokeType" value="Ground"></button>
-        <button class="pokeType" value="Fighting"></button>
-        <button class="pokeType" value="Rock"></button>
-        <button class="pokeType" value="Ice"></button>
-        <button class="pokeType" value="Flying"></button>
-        <button class="pokeType" value="Fire"></button>
-        <button class="pokeType" value="Ghost"></button>
-        <button class="pokeType" value="Electric"></button>
+
+
+    <div  id ="buttonsType" >
+        <button  class="pokeType" value="Bug">Bicho</button>
+        <button class="pokeType" value="Dragon">Dragon</button>
+        <button  class="pokeType" value="Grass">Planta</button>
+        <button class="pokeType" value="Ground">Tierra</button>
+        <button class="pokeType" value="Fighting">Lucha</button>
+        <button class="pokeType" value="Rock">Roca</button>
+        <button class="pokeType" value="Ice">Hielo</button>
+        <button class="pokeType" value="Flying">Volador</button>
+        <button class="pokeType" value="Fairy">Hada</button>
+        <button class="pokeType" value="Ghost">Fantasma</button>
+        <button class="pokeType" value="Electric">Eléctrico</button>
 
     </div>
 
 
 
     <div id ="imagenes" class="contenedor">
+    <br>
+    <br>
+    <button id="back">Volver a Tipos</button>
     </div>
 
 
 
-  <div class="orderBy">
+  <!--<div class="orderBy">
     <select id="orderBy">
       <option value="" disabled selected>Ordenar por</option>
       <option value="a-z">A-Z</option>
       <option value="z-a">Z-A</option>
     </select>
-  </div>
+  </div>-->
      <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
