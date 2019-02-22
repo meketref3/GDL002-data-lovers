@@ -7,9 +7,9 @@ describe('pokemon',()=>{
   });
 });
 
-describe('filterData',()=>{
+describe('filterType',()=>{
   it('is a function',()=>{
-    expect(typeof filterData).toBe('function');
+    expect(typeof filterType).toBe('function');
   });
 });
 
@@ -19,11 +19,11 @@ describe('sortData',()=>{
   });
 });
 
-describe('computeStats',()=>{
+/*describe('computeStats',()=>{
   it('is a function',()=>{
     expect(typeof computeStats).toBe('function');
   });
-});
+});*/
 
 /*describe('example', () => {
   it('is a function', () => {

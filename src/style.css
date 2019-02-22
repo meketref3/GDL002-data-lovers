@@ -1,6 +1,6 @@
 
-.contenedor{
-display:inline;
+.caja-pokemon{
+display:inline-block;
 }
 
 .display_none {
