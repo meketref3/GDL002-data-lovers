@@ -1,22 +1,30 @@
 const data = window.POKEMON.pokemon;
+
+
 document.getElementById('buttonsType').classList.add('display_none');
-document.getElementById('orderBy').classList.add('display_none');
+//document.getElementById('orderBy').classList.add('display_none');
 
 //variable de bienvenida.
 const buttonUseRegister=document.getElementById('buttonRegister');
 //Funcion para el registro.
+
 buttonUseRegister.addEventListener('click',function(){
 //variable de input para registrar usuario.
 const userInput =document.getElementById('user').value;
 document.getElementById('useRegister').classList.add('display_none');
 document.getElementById('useRegister').classList.remove('display_block');
-
-document.getElementById('hi').innerHTML = 'Hola '+userInput;
+document.getElementById('selectType').style.display = "block";
+document.getElementById('hi').innerHTML = 'Konnichiwa '+ userInput;
 document.getElementById('buttonsType').classList.add('display_block');
 document.getElementById('orderBy').classList.add('display_block');
 });
 
+document.getElementById('back').addEventListener('click', backType);
 
+function backType () {
+window.history.go(back);
+
+}
 const containerRoot = document.getElementById('imagenes');
 
 //-----------------------------filtara------------------------------------------
@@ -27,11 +35,12 @@ let selectType =Array.from(document.getElementsByClassName('pokeType'));
     for (let i = 0; i <= selectType.length; i++) {
     let botonesArray= selectType[i];
       botonesArray.addEventListener('click',()=>{
-
+        document.getElementById('buttonsType').setAttribute("class","hidden");
         let condition = botonesArray.value;
         /*creo una variable donde obtiene la funcion de filtrar.
         donde le estoy mandando mis datos y mi condicion del selector.*/
         let filtered = window.allPokemon.filterType(data, condition);
+       // document.getElementsByClassName('pokeType').setAttribute("class", "hidden"); ->intento de bloquear botones
         //hago una variable donde me manda el resultado en innerHTML
         let result = "";
         console.log(filtered);
