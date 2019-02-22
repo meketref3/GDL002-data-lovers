@@ -5,10 +5,10 @@ document.getElementById('buttonsType').classList.add('display_none');
 //document.getElementById('orderBy').classList.add('display_none');
 
 //variable de bienvenida.
-const buttonUseRegister=document.getElementById('buttonRegister');
+//const buttonUseRegister=document.getElementById('buttonRegister');
 //Funcion para el registro.
 
-buttonUseRegister.addEventListener('click',function(){
+/*buttonUseRegister.addEventListener('click',function(){
 //variable de input para registrar usuario.
 const userInput =document.getElementById('user').value;
 document.getElementById('useRegister').classList.add('display_none');
@@ -16,15 +16,9 @@ document.getElementById('useRegister').classList.remove('display_block');
 document.getElementById('selectType').style.display = "block";
 document.getElementById('hi').innerHTML = 'Konnichiwa '+ userInput;
 document.getElementById('buttonsType').classList.add('display_block');
-document.getElementById('orderBy').classList.add('display_block');
-});
+//document.getElementById('orderBy').classList.add('display_block');
+});*/
 
-document.getElementById('back').addEventListener('click', backType);
-
-function backType () {
-window.history.go(back);
-
-}
 const containerRoot = document.getElementById('imagenes');
 
 //-----------------------------filtara------------------------------------------

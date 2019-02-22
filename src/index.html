@@ -9,13 +9,15 @@
     <section id="root"></section>
     <!-- bloque de registro-->
     <div id="useRegister" >
-      <p>Bienvenidx Pokeuser, en esta web podrás conocer algunos datos sobre los Pokemon de la región de Kanto.
+      <p>Bienvenidx Pokeuser, en esta web podrás conocer algunos datos sobre los Pokemon de la región de Kanto de la primera generación
         <br>
-        Por favor Ingresa tu nombre para continuar:
+        Esta información te ayudará a visualizar las debilidades de los Pokemón e información que puede ayudarte a mejorar tu juego si utilizas Pokemon Go.
+        <br>
+        Por favor selecciona que tipo de Pokemon quieres abrir:
       </p>
-      <input type="text" id="user" class="user" placeholder="Nombre de usuario."/>
+      <!--<input type="text" id="user" class="user" placeholder="Nombre de usuario."/>
       <button id="buttonRegister" class="buttonRegister"></button>
-    </div>
+    </div>-->
     <!--bloque de nombre-->
     <div id="selectType" class="hidden">
       <h1 id="hi"></h1>
@@ -23,31 +25,31 @@
     </div>
 
 
-    <div  id ="buttonsType" >
-        <button  class="pokeType" value="Bug">Bicho</button>
-        <button class="pokeType" value="Dragon">Dragon</button>
-        <button  class="pokeType" value="Grass">Planta</button>
-        <button class="pokeType" value="Ground">Tierra</button>
-        <button class="pokeType" value="Fighting">Lucha</button>
-        <button class="pokeType" value="Rock">Roca</button>
-        <button class="pokeType" value="Ice">Hielo</button>
-        <button class="pokeType" value="Flying">Volador</button>
-        <button class="pokeType" value="Fairy">Hada</button>
-        <button class="pokeType" value="Ghost">Fantasma</button>
-        <button class="pokeType" value="Electric">Eléctrico</button>
-
+    <div  id ="buttonsType"  class="buttonsType show">
+        <button  class="pokeType" value="Bug"><img src="botones/bug.png" alt="" width="100"></button>
+        <button class="pokeType" value="Dragon"><img src="botones/dragon.png" alt="" width="100"></button>
+        <button  class="pokeType" value="Grass"><img src="botones/grass.png" alt="" width="100"></button>
+        <button class="pokeType" value="Ground"><img src="botones/ground.png" alt="" width="100"></button>
+        <button class="pokeType" value="Fighting"><img src="botones/fighting.png" alt="" width="100"></button>
+        <button class="pokeType" value="Rock"><img src="botones/rock.png" alt="" width="100"></button>
+        <button class="pokeType" value="Ice"><img src="botones/ice.png" alt="" width="100"></button>
+        <button class="pokeType" value="Flying"><img src="botones/flying.png" alt="" width="100"></button>
+        <button class="pokeType" value="Fire"><img src="botones/fire.png" alt="" width="100"></button>
+        <button class="pokeType" value="Ghost"><img src="botones/ghost.png" alt="" width="100"></button>
+        <button class="pokeType" value="Electric"><img src="botones/electric.png" alt="" width="100"></button>
+        <button class="pokeType" value="Water"><img src="botones/water.png" alt="" width="100"></button>
+        <button class="pokeType" value="Psychic"><img src="botones/psychic.png" alt="" width="100"></button>
+       <button class="pokeType" value="Poison"><img src="botones/poison.png" alt="" width="100"></button>
+        <button class="pokeType" value="Normal"><img src="botones/normal.png" alt="" width="100"></button>
     </div>
 
 
 
     <div id ="imagenes" class="contenedor">
-    <br>
-    <br>
-    <button id="back">Volver a Tipos</button>
     </div>
 
 
-
+<button onclick="location.reload();" class="btn_reload"style="position:absolute; top:555px; right:10px">Seleccionar otro tipo</button>
   <!--<div class="orderBy">
     <select id="orderBy">
       <option value="" disabled selected>Ordenar por</option>

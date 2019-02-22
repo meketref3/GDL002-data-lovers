@@ -1,4 +1,8 @@
-
+.buttonsType {
+  width: 1000px;
+  margin-top: 200px;
+  margin-left: 300px;
+}
 .caja-pokemon{
 display:inline-block;
 }
@@ -12,4 +16,8 @@ display:inline-block;
 }
 .hidden {
     display:none;
+}
+
+.show {
+  display:block;
 }
