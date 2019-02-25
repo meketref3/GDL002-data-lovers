@@ -8,24 +8,25 @@
   <body>
     <section id="root"></section>
     <!-- bloque de registro-->
-    <div id="useRegister" >
+    <div id="welcomePage" class="welcomePage" >
       <p>Bienvenidx Pokeuser, en esta web podrás conocer algunos datos sobre los Pokemon de la región de Kanto de la primera generación
         <br>
         Esta información te ayudará a visualizar las debilidades de los Pokemón e información que puede ayudarte a mejorar tu juego si utilizas Pokemon Go.
         <br>
         Por favor selecciona que tipo de Pokemon quieres abrir:
       </p>
+    </div>
       <!--<input type="text" id="user" class="user" placeholder="Nombre de usuario."/>
       <button id="buttonRegister" class="buttonRegister"></button>
     </div>-->
     <!--bloque de nombre-->
-    <div id="selectType" class="hidden">
+    <div id="selectType" class="display_none">
       <h1 id="hi"></h1>
       <p>Por favor elige que tipo de Pokemón deseas ver:</p>
     </div>
 
 
-    <div  id ="buttonsType"  class="buttonsType show">
+    <div  id ="buttonsType"  class="buttonsType display_block">
         <button  class="pokeType" value="Bug"><img src="botones/bug.png" alt="" width="100"></button>
         <button class="pokeType" value="Dragon"><img src="botones/dragon.png" alt="" width="100"></button>
         <button  class="pokeType" value="Grass"><img src="botones/grass.png" alt="" width="100"></button>
@@ -45,18 +46,23 @@
 
 
 
-    <div id ="imagenes" class="contenedor">
-    </div>
+
+<div>
+    <span id ="imagenes" class="contenedor"> </span>
+</div>
+
+<div id="buttonClear" class="buttonClear">
+  <button onclick="location.reload();" class="btn_reload" style="position:absolute; top:555px; right:10px">Seleccionar otro tipo</button>
+</div>
 
 
-<button onclick="location.reload();" class="btn_reload"style="position:absolute; top:555px; right:10px">Seleccionar otro tipo</button>
-  <!--<div class="orderBy">
+  <div class="orderBy">
     <select id="orderBy">
       <option value="" disabled selected>Ordenar por</option>
       <option value="a-z">A-Z</option>
       <option value="z-a">Z-A</option>
     </select>
-  </div>-->
+  </div>
      <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>

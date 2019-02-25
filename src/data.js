@@ -1,47 +1,18 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-/*const example = () => {
-  return 'example';
-};*/
-//onst buttonUseRegister=document.getElementById('buttonRegister');
-
-//const infoPokemon = window.POKEMON.pokemon;
-
-//let list=[];
-/*document.getElementById('buttonRegister').addEventListener('click', showPokemons);
-function fillElement (infoPokemon, activeElem){
-
-    for(let i=0; i<infoPokemon.length; i++){
-
-         let newDiv=document.createElement("div");
-         newDiv.className ="contenedor";
-         newDiv.innerHTML = "<img src=\"" +infoPokemon[i].img+ "\">";
-         activeElem.insertAdjacentElement("beforeend", newDiv);
-
-       };
-    };
-
-function showPokemons(){
-  let infoPokemon = POKEMON.pokemon;
-  let divPokemonList = document.getElementById("contenedor");
-  fillElement(infoPokemon,divPokemonList);
-};*/
 window.allPokemon = {
-          //creo mi funcion de filtrado, donde coloco los parametros de data
-         // y condition que estan declarados en mi main.
-  filterType: (data, condition) => {
-          //se crea una variable donde le hago una funcion de los datos con un filter
-         //le pongo el argumento element.
-    const filteredType = data.filter(element => {
-               /*retorno mi element.type(que es el tipo de mi pokemon).junto con el
-                metodo indexOf, donde le paso mi condition donde esta evaluando mi selector del html.
-                retorna el primer índice en el que se puede encontrar un elemento
-                 dado en el array, ó retorna -1 si el elemento no esta presente.*/
-      return element.type.indexOf(condition) > -1;
-  });
-        //como function retorna mi filteredType.
-        return filteredType;
+      //creo mi funcion de filtrado, donde coloco los parametros de data
+      // y condition que estan declarados en mi main.
+      filterType: (data, condition) => {
+              //se crea una variable donde le hago una funcion de los datos con un filter
+             //le pongo el argumento element.
+              const filteredType = data.filter(element => {
+                    /*retorno mi element.type(que es el tipo de mi pokemon).junto con el
+                     metodo indexOf, donde le paso mi condition donde esta evaluando mi selector del html.
+                     retorna el primer índice en el que se puede encontrar un elemento
+                     dado en el array, ó retorna -1 si el elemento no esta presente.*/
+                     return element.type.indexOf(condition) > -1;
+        });
+                           //como function retorna mi filteredType.
+                             return filteredType;
 },
 
 
