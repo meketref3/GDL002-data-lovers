@@ -7,15 +7,21 @@ describe('pokemon',()=>{
   });
 });
 
+describe('allPokemon',()=>{
+  it('is an object',()=>{
+    expect(typeof allPokemon).toBe('object');
+  });
+});
+
 describe('filterType',()=>{
   it('is a function',()=>{
-    expect(typeof filterType).toBe('function');
+    expect(typeof window.allPokemon.filterType).toBe('function');
   });
 });
 
 describe('sortData',()=>{
   it('is a function',()=>{
-    expect(typeof sortData).toBe('function');
+    expect(typeof window.allPokemon.sortData).toBe('function');
   });
 });
 
