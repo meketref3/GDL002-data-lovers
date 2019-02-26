@@ -1,39 +1,43 @@
+
+//llamo mis datos de pokemon.
 const data = window.POKEMON.pokemon;
 
-//variables globales.
-document.getElementById('buttonsType').classList.add('display_none');
+//esto es lo que se va a mostrar en pantalla
 document.getElementById('buttonClear').classList.add('display_none');
 document.getElementById('welcomePage').classList.add('display_block');
 document.getElementById('orderBy').classList.add('display_none');
 
+//variable para imprimir las imagenes en la pantalla
+const containerRoot = document.getElementById('img');
 
-const containerRoot = document.getElementById('imagenes');
+
+
+
+
+//variable para convertir mis botones de filtrado en un arrey para que me haga la misma funcion.
 let selectType =Array.from(document.getElementsByClassName('pokeType'));
 //-----------------------------filtara------------------------------------------
     for (let i = 0; i <= selectType.length; i++) {
-    let botonesArray= selectType[i];
-       botonesArray.addEventListener('click',()=>{
+    let buttonsArray= selectType[i];
+       buttonsArray.addEventListener('click',()=>{
         document.getElementById('buttonsType').setAttribute("class","display_none");
         document.getElementById('buttonClear').setAttribute('class','display_block');
         document.getElementById('welcomePage').setAttribute('class','display_none');
         document.getElementById('orderBy').classList.add('display_block');
-        
-        let condition = botonesArray.value;
+
+        let condition = buttonsArray.value;
         let filtered = window.allPokemon.filterType(data, condition);
         showPokemons(filtered);
         selectOrder(filtered);
-        //selectOrder(filtered,sortBy);
-        //console.log(filtered);
-
-
-});
+        calcSpawnChance(filtered);
+    });
 
 
 }
 
 
   //---------------------------------ordenara-9-----------------------------------
-  //hago mi variable de selectOrder para cargar mi selector de id de html
+  //hago mi funcion para el ordenado.
   function selectOrder (filtered){
 
                    let selectedOrder = document.getElementById('orderBy');
@@ -52,13 +56,30 @@ let selectType =Array.from(document.getElementsByClassName('pokeType'));
      });
 
 }
+
+function calcSpawnChance (filtered){
+
+  let calc = document.getElementById('calculo');
+  calc.addEventListener('click',()=>{
+    let calcCompute = calc.value;
+  console.log(calcCompute);
+    let compute = window.allPokemon.computeStats(filtered, calcCompute);
+    console.log(compute);
+  })
+
+}
+
+
+
+
  ////-------------------------------imprime---------------------------------
 
 
 function showPokemons (filtered){
    let result = "";
    containerRoot.innerHTML = '';
-filtered.forEach(element => {
+
+  filtered.forEach(element => {
 
       result = containerRoot.innerHTML +=
         `<div class="caja-pokemon">

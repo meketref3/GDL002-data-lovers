@@ -16,19 +16,21 @@ window.allPokemon = {
 },
 
 
+
+
        //creo mi funcion de ordenado. le paso mis parametros data y sortBy
       //que estan en mi main.js
   sortData: (filtered, sortBy) => {
          /* console.log(data, sortOrder);
          hago dos condicionales donde si mi en mi primera
           condicion selecion es a-z*/
-    if (sortBy == 'a-z') {
-      /*me retorna los datos con mi .sort
-      en la cual creo una funcion con los parametros a,b.
-      en ella creo otras dos condicionales*/
-        return filtered.sort((a, b) => {
+             if (sortBy == 'a-z') {
+               /*me retorna los datos con mi .sort
+               en la cual creo una funcion con los parametros a,b.
+                 en ella creo otras dos condicionales*/
+              return filtered.sort((a, b) => {
            //si  a.name(data) es mayor b.name(data)
-        if (a.name > b.name) {
+            if (a.name > b.name) {
           //retorna 1
           return 1;
         }
@@ -61,9 +63,22 @@ window.allPokemon = {
         return 0;
       });
     }
-  },
+},
 
-  computeStats: (filtered) => {
-    return filtered.length;
-  }
-};
+
+
+
+  computeStats: (filtered, calcCompute) => {
+    let max = 0;
+    let dataCalc = filtered.keys("spawn_chance");
+    console.log(dataCalc);
+  for(let i =0; i<=dataCalc; i++){
+        if(max < dataCalc [i]);{
+          max=dataCalc[i];
+        };
+
+    console.log(max);
+
+  };
+}
+}
