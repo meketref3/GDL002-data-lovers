@@ -68,17 +68,18 @@ window.allPokemon = {
 
 
 
-  computeStats: (filtered, calcCompute) => {
-    let max = 0;
-    let dataCalc = filtered.keys("spawn_chance");
-    console.log(dataCalc);
-  for(let i =0; i<=dataCalc; i++){
-        if(max < dataCalc [i]);{
-          max=dataCalc[i];
-        };
+  /*computeStats: (filtered, calcCompute) => {
+    let max = filtered[0];
+  //  let dataCalc = filtered.forEach(element=>{
+        for(let i=1; i>filtered.length; i++){
+          if(filtered[i]>max){
+            max = filtered[i];
+          }
+        }
+         return max ;
+      //console.log(max);
+  }*/
 
-    console.log(max);
 
-  };
-}
-}
+
+};

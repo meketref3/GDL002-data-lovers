@@ -17,6 +17,9 @@ describe('filterType',()=>{
   it('is a function',()=>{
     expect(typeof window.allPokemon.filterType).toBe('function');
   });
+  it('debería retornar element.type', () =>{
+    expect(window.allPokemon.filterType (filterType,'element.type.indexOf(condition) > -1'));
+  });
 });
 
 describe('sortData',()=>{

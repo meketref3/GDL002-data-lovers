@@ -65,7 +65,7 @@ function calcSpawnChance (filtered){
   console.log(calcCompute);
     let compute = window.allPokemon.computeStats(filtered, calcCompute);
     console.log(compute);
-  })
+  });
 
 }
 
