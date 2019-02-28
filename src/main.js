@@ -55,29 +55,17 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 
 }
 
-function calculateSpawnChance (filtered){
-document.getElementById('buttonCalculate').addEventListener('click',()=>{
-    //let buttonTocalculate = calSpawnChance.value;
 
-
-    // showPokemonSpawn(compute);
-
-     containerRoot.innerHTML = '';
-        if(document.getElementById('buttonCalculate').value === 'spawn_chance'){
-          let compute = window.allPokemon.computeStats(filtered);
-          console.log(JSON.stringify(compute));
-          let resultSpawn = "";
-          filtered.forEach(element => {
-          resultSpawn = containerRoot.innerHTML +=
-          `<div class="caja-pokemon">
-             <div class="flip-card">
-              <h1 class="activator"> ${element.spawn_chance}</h1>
-            </div>
-            </div>`;
-          });
-       return resultSpawn;
-     }
-  });
+function calcSpawnChance (filtered){
+  let calc = document.getElementById('calculo');
+  calc.addEventListener('click',()=>{
+    let clearWindow = containerRoot.innerHTML = '';
+    let compute = window.allPokemon.computeStats(filtered);
+    document.getElementById('result').setAttribute("class","show");
+    document.getElementById('calculo').setAttribute('class','hidden');
+    document.getElementById('orderBy').setAttribute('class','hidden');
+    document.getElementById('spawnResult', 'result').innerHTML = compute;
+    });
 
 }
 
@@ -90,6 +78,7 @@ document.getElementById('buttonCalculate').addEventListener('click',()=>{
 function showPokemons (filtered){
    let result = "";
    containerRoot.innerHTML = '';
+   document.getElementById("calculo").setAttribute("class","show");
 
   filtered.forEach(element => {
 
