@@ -11,10 +11,6 @@ document.getElementById('orderBy').classList.add('display_none');
 const containerRoot = document.getElementById('img');
 
 
-
-
-
-//variable para convertir mis botones de filtrado en un arrey para que me haga la misma funcion.
 let selectType = Array.from(document.getElementsByClassName('pokeType'));
 //-----------------------------filtara------------------------------------------
     for (let i = 0; i <= selectType.length; i++) {
@@ -30,7 +26,7 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 
         showPokemons(filtered);
         selectOrder(filtered);
-        calcSpawnChance(filtered);
+        calculateSpawnChance(filtered);
     });
 
 
@@ -58,6 +54,7 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
      });
 
 }
+
 
 function calcSpawnChance (filtered){
   let calc = document.getElementById('calculo');

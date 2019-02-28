@@ -72,10 +72,10 @@ window.allPokemon = {
 
   computeStats: (filtered) => {
 
-      //let array1 = [filtered];
       let maxArray = filtered.map((element) => (element.spawn_chance));
          let result = Math.max.apply(Math, maxArray);
          // console.log(result);
           return result;
      }
+
 };
