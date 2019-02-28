@@ -62,24 +62,4 @@ window.allPokemon = {
         }
         return 0;
       });
-    }
-},
-
-
-
-
-  /*computeStats: (filtered, calcCompute) => {
-    let max = filtered[0];
-  //  let dataCalc = filtered.forEach(element=>{
-        for(let i=1; i>filtered.length; i++){
-          if(filtered[i]>max){
-            max = filtered[i];
-          }
-        }
-         return max ;
-      //console.log(max);
-  }*/
-
-
-
-};
+  };

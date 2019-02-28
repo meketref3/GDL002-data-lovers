@@ -57,21 +57,6 @@ let selectType =Array.from(document.getElementsByClassName('pokeType'));
 
 }
 
-function calcSpawnChance (filtered){
-
-  let calc = document.getElementById('calculo');
-  calc.addEventListener('click',()=>{
-    let calcCompute = calc.value;
-  console.log(calcCompute);
-    let compute = window.allPokemon.computeStats(filtered, calcCompute);
-    console.log(compute);
-  });
-
-}
-
-
-
-
  ////-------------------------------imprime---------------------------------
 
 
