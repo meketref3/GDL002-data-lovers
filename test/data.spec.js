@@ -1,5 +1,6 @@
 require('../src/data.js');
-const pokemon = require('../src/data/pokemon/pokemon.js');
+const pokemon = require('../src/data/pokemon/pokemon.json');
+const filterTypeMock = require('../src/data/pokemon/filterTypeMock.json');
 
 describe('pokemon',()=>{
   it('is an object',()=>{
@@ -17,8 +18,10 @@ describe('filterType',()=>{
   it('is a function',()=>{
     expect(typeof window.allPokemon.filterType).toBe('function');
   });
-  it('debería retornar element.type', () =>{
-    expect(window.allPokemon.filterType (filterType,'element.type.indexOf(condition) > -1'));
+
+  it('should return a subset of electric pokemon', () => {
+
+    expect(window.allPokemon.filterType(pokemon.pokemon, 'Electric')).toEqual(filterTypeMock);
   });
 });
 

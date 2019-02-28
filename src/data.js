@@ -10,9 +10,11 @@ window.allPokemon = {
                      retorna el primer índice en el que se puede encontrar un elemento
                      dado en el array, ó retorna -1 si el elemento no esta presente.*/
                      return element.type.indexOf(condition) > -1;
+
         });
                            //como function retorna mi filteredType.
                              return filteredType;
+
 },
 
 
@@ -62,4 +64,18 @@ window.allPokemon = {
         }
         return 0;
       });
-  };
+    }
+},
+
+
+
+
+  computeStats: (filtered) => {
+
+      //let array1 = [filtered];
+      let maxArray = filtered.map((element) => (element.spawn_chance));
+         let result = Math.max.apply(Math, maxArray);
+          //console.log(result);
+          return result;
+     }
+};

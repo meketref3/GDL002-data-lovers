@@ -15,7 +15,7 @@ const containerRoot = document.getElementById('img');
 
 
 //variable para convertir mis botones de filtrado en un arrey para que me haga la misma funcion.
-let selectType =Array.from(document.getElementsByClassName('pokeType'));
+let selectType = Array.from(document.getElementsByClassName('pokeType'));
 //-----------------------------filtara------------------------------------------
     for (let i = 0; i <= selectType.length; i++) {
     let buttonsArray= selectType[i];
@@ -27,6 +27,7 @@ let selectType =Array.from(document.getElementsByClassName('pokeType'));
 
         let condition = buttonsArray.value;
         let filtered = window.allPokemon.filterType(data, condition);
+
         showPokemons(filtered);
         selectOrder(filtered);
         calcSpawnChance(filtered);
@@ -49,13 +50,28 @@ let selectType =Array.from(document.getElementsByClassName('pokeType'));
                     let sortBy = selectedOrder.value;
                     //creo una variable donde obtiene la funcion de filtrar. donde le estoy mandando mis datos y mi condicion del selector.
                     let ordered = window.allPokemon.sortData(filtered, sortBy);
-                    console.log(ordered);
+
                    showPokemons(ordered);
+
 
 
      });
 
 }
+
+function calcSpawnChance (filtered){
+
+  let calc = document.getElementById('calculo');
+  calc.addEventListener('click',()=>{
+    let compute = window.allPokemon.computeStats(filtered);
+    console.log(compute);
+
+    });
+
+}
+
+
+
 
  ////-------------------------------imprime---------------------------------
 
