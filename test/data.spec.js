@@ -1,6 +1,9 @@
 require('../src/data.js');
 const pokemon = require('../src/data/pokemon/pokemon.json');
 const filterTypeMock = require('../src/data/pokemon/filterTypeMock.json');
+const sortDataMock  = require('../src/data/pokemon/sortDataMck.json');
+const computeStatsMock = require('../src/data/pokemon/computeStatsMock.json');
+
 
 describe('pokemon',()=>{
   it('is an object',()=>{
@@ -21,8 +24,7 @@ describe('filterType',()=>{
 
   it('should return a subset of electric pokemon', () => {
 
-    expect(window.allPokemon.filterType(pokemon.pokemon, 'Electric')).
-    (filterTypeMock);
+    expect(window.allPokemon.filterType(pokemon.pokemon, 'Electric')).toEqual(filterTypeMock);
   });
 });
 
@@ -30,19 +32,17 @@ describe('sortData',()=>{
   it('is a function',()=>{
     expect(typeof window.allPokemon.sortData).toBe('function');
   });
+  it('should return order of dragon pokemon', () =>{
+    expect(window.allPokemon.sortData(pokemon.pokemon, 'a-z')).toEqual(sortDataMock);
+  });
 });
 
-/*describe('computeStats',()=>{
+describe('computeStats',()=>{
   it('is a function',()=>{
-    expect(typeof computeStats).toBe('function');
+  expect(typeof window.allPokemon.computeStats).toBe('function');
   });
-});*/
+  it ('should return the greatest spawn_chance of pokemon',()=>{
+    expect(typeof window.allPokemon.computeStats(pokemon.pokemon,'spawn_chance')).toEqual(computeStatsMock);
 
-/*describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
   });
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});*/
+});

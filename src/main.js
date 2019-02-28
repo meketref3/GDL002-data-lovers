@@ -11,10 +11,6 @@ document.getElementById('orderBy').classList.add('display_none');
 const containerRoot = document.getElementById('img');
 
 
-
-
-
-//variable para convertir mis botones de filtrado en un arrey para que me haga la misma funcion.
 let selectType = Array.from(document.getElementsByClassName('pokeType'));
 //-----------------------------filtara------------------------------------------
     for (let i = 0; i <= selectType.length; i++) {
@@ -30,7 +26,7 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 
         showPokemons(filtered);
         selectOrder(filtered);
-        calcSpawnChance(filtered);
+        calculateSpawnChance(filtered);
     });
 
 
@@ -59,14 +55,29 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 
 }
 
-function calcSpawnChance (filtered){
+function calculateSpawnChance (filtered){
+document.getElementById('buttonCalculate').addEventListener('click',()=>{
+    //let buttonTocalculate = calSpawnChance.value;
 
-  let calc = document.getElementById('calculo');
-  calc.addEventListener('click',()=>{
-    let compute = window.allPokemon.computeStats(filtered);
-    console.log(compute);
 
-    });
+    // showPokemonSpawn(compute);
+
+     containerRoot.innerHTML = '';
+        if(document.getElementById('buttonCalculate').value === 'spawn_chance'){
+          let compute = window.allPokemon.computeStats(filtered);
+          console.log(JSON.stringify(compute));
+          let resultSpawn = "";
+          filtered.forEach(element => {
+          resultSpawn = containerRoot.innerHTML +=
+          `<div class="caja-pokemon">
+             <div class="flip-card">
+              <h1 class="activator"> ${element.spawn_chance}</h1>
+            </div>
+            </div>`;
+          });
+       return resultSpawn;
+     }
+  });
 
 }
 
