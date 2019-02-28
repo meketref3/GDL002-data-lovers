@@ -1,13 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Orbitron|Patrick+Hand|Press+Start+2P|Prompt|VT32");
+
+body {
+  background: rgba(74,188,167,1);
+  background: -moz-linear-gradient(top, rgba(74,188,167,1) 0%, rgba(143,242,206,1) 16%, rgba(212,242,208,1) 42%, rgba(235,254,216,1) 50%, rgba(243,254,212,1) 59%, rgba(253,210,178,1) 72%, rgba(252,204,175,1) 80%, rgba(250,179,161,1) 94%, rgba(250,179,161,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(74,188,167,1) 0%, rgba(143,242,206,1) 16%, rgba(212,242,208,1) 42%, rgba(235,254,216,1) 50%, rgba(243,254,212,1) 59%, rgba(253,210,178,1) 72%, rgba(252,204,175,1) 80%, rgba(250,179,161,1) 94%, rgba(250,179,161,1) 100%);
+  background: -o-linear-gradient(top, rgba(74,188,167,1) 0%, rgba(143,242,206,1) 16%, rgba(212,242,208,1) 42%, rgba(235,254,216,1) 50%, rgba(243,254,212,1) 59%, rgba(253,210,178,1) 72%, rgba(252,204,175,1) 80%, rgba(250,179,161,1) 94%, rgba(250,179,161,1) 100%);
+  background: -ms-linear-gradient(top, rgba(74,188,167,1) 0%, rgba(143,242,206,1) 16%, rgba(212,242,208,1) 42%, rgba(235,254,216,1) 50%, rgba(243,254,212,1) 59%, rgba(253,210,178,1) 72%, rgba(252,204,175,1) 80%, rgba(250,179,161,1) 94%, rgba(250,179,161,1) 100%);
+  background: linear-gradient(to bottom, rgba(74,188,167,1) 0%, rgba(143,242,206,1) 16%, rgba(212,242,208,1) 42%, rgba(235,254,216,1) 50%, rgba(243,254,212,1) 59%, rgba(253,210,178,1) 72%, rgba(252,204,175,1) 80%, rgba(250,179,161,1) 94%, rgba(250,179,161,1) 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  display: inline-block;
+
+}
+
 .buttonsType {
   width: 1000px;
   margin-top: 200px;
   margin-left: 300px;
 }
 
+.buttonStyles {
+
+  background-color: transparent;
+  border-style: none;
+}
 
 .caja-pokemon{
 float: left;
+margin-left: 10%;
 }
+
+.containingImg {
+margin-left: 4%;
+background-color: black;
+
+}
+
 
 .contenedor{
   display: inline-block;
@@ -19,17 +47,21 @@ float: left;
   width: 300px;
   height: 300px;
   perspective: 1000px;
+
+
 }
 
 .flip-card-inner {
 
   position: relative;
-  width: 90%;
+  width: 85%;
   height: 90%;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  border-color: black;
+
 }
 
 .flip-card:hover .flip-card-inner {
@@ -41,22 +73,29 @@ float: left;
   height: 100%;
   backface-visibility: hidden;
   position: absolute;
+  border-color: black;
 }
 
 .flip-card-front {
 
-  background-color: #f3f3f3;
+  background-color: transparent;
   color: black;
   z-index: 2;
+  border-style: solid;
+  border-color: white;
+  border-width: thick;
+
 }
 
 .flip-card-back {
 
-  background-color: #2980b9;
+  background-color: #4abca7;
   color: white;
   transform: rotateY(180deg);
   z-index: -1;
   position: absolute;
+  margin-left: 0%;
+  border-color: black;
 }
 
 .display_none {
@@ -72,4 +111,11 @@ float: left;
 
 .show {
   display:block;
+}
+
+.headerStyle {
+background-color: transparent;
+border-style: none;
+
+
 }

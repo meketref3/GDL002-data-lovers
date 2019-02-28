@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+    <header class="headerStyle"><img src="botones/logo.png" alt="" width="400"></header>
+
+
     <section id="root"></section>
     <!-- bloque de registro-->
     <div id="welcomePage" class="welcomePage" >
@@ -27,27 +30,27 @@
 
 
     <div  id ="buttonsType"  class="buttonsType display_block">
-        <button  class="pokeType" value="Bug"><img src="botones/bug.png" alt="" width="100"></button>
-        <button class="pokeType" value="Dragon"><img src="botones/dragon.png" alt="" width="100"></button>
-        <button  class="pokeType" value="Grass"><img src="botones/grass.png" alt="" width="100"></button>
-        <button class="pokeType" value="Ground"><img src="botones/ground.png" alt="" width="100"></button>
-        <button class="pokeType" value="Fighting"><img src="botones/fighting.png" alt="" width="100"></button>
-        <button class="pokeType" value="Rock"><img src="botones/rock.png" alt="" width="100"></button>
-        <button class="pokeType" value="Ice"><img src="botones/ice.png" alt="" width="100"></button>
-        <button class="pokeType" value="Flying"><img src="botones/flying.png" alt="" width="100"></button>
-        <button class="pokeType" value="Fire"><img src="botones/fire.png" alt="" width="100"></button>
-        <button class="pokeType" value="Ghost"><img src="botones/ghost.png" alt="" width="100"></button>
-        <button class="pokeType" value="Electric"><img src="botones/electric.png" alt="" width="100"></button>
-        <button class="pokeType" value="Water"><img src="botones/water.png" alt="" width="100"></button>
-        <button class="pokeType" value="Psychic"><img src="botones/psychic.png" alt="" width="100"></button>
-       <button class="pokeType" value="Poison"><img src="botones/poison.png" alt="" width="100"></button>
-        <button class="pokeType" value="Normal"><img src="botones/normal.png" alt="" width="100"></button>
+        <button  class="pokeType buttonStyles" value="Bug"><img src="botones/bug.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Dragon"><img src="botones/dragon.png" alt="" width="100"></button>
+        <button  class="pokeType buttonStyles" value="Grass"><img src="botones/grass.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Ground"><img src="botones/ground.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Fighting"><img src="botones/fighting.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Rock"><img src="botones/rock.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Ice"><img src="botones/ice.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Flying"><img src="botones/flying.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Fire"><img src="botones/fire.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Ghost"><img src="botones/ghost.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Electric"><img src="botones/electric.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Water"><img src="botones/water.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Psychic"><img src="botones/psychic.png" alt="" width="100"></button>
+       <button class="pokeType buttonStyles" value="Poison"><img src="botones/poison.png" alt="" width="100"></button>
+        <button class="pokeType buttonStyles" value="Normal"><img src="botones/normal.png" alt="" width="100"></button>
     </div>
 
 
 
 
-<div>
+<div class="containingImg">
     <span id ="img"> </span>
 </div>
 
@@ -66,14 +69,14 @@
 
 
   <div>
-    <button id="calculo" class="hidden" value="spawn_chance">calculo</button>
+    <button id="calculo" class="hidden buttonStyles" value="spawn_chance"><img src="botones/spawnChance.png" alt="" width="100"></button>
     <h2 id="result" class="hidden">El pokemon con Mayor Spawn chance dentro de este Tipo es:</h2>
     <p id="spawnResult"></p>
 </div>
 
 
-  
-  
+
+
   <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
