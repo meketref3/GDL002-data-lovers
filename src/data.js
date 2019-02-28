@@ -75,7 +75,7 @@ window.allPokemon = {
       //let array1 = [filtered];
       let maxArray = filtered.map((element) => (element.spawn_chance));
          let result = Math.max.apply(Math, maxArray);
-          //console.log(result);
+         // console.log(result);
           return result;
      }
 };

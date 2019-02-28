@@ -60,12 +60,14 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 }
 
 function calcSpawnChance (filtered){
-
   let calc = document.getElementById('calculo');
   calc.addEventListener('click',()=>{
+    let clearWindow = containerRoot.innerHTML = '';
     let compute = window.allPokemon.computeStats(filtered);
-    console.log(compute);
-
+    document.getElementById('result').setAttribute("class","show");
+    document.getElementById('calculo').setAttribute('class','hidden');
+    document.getElementById('orderBy').setAttribute('class','hidden');
+    document.getElementById('spawnResult', 'result').innerHTML = compute;
     });
 
 }
@@ -79,6 +81,7 @@ function calcSpawnChance (filtered){
 function showPokemons (filtered){
    let result = "";
    containerRoot.innerHTML = '';
+   document.getElementById("calculo").setAttribute("class","show");
 
   filtered.forEach(element => {
 
