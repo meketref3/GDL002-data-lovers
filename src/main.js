@@ -25,7 +25,7 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
         let condition = buttonsArray.value;
         let filtered = window.allPokemon.filterType(data, condition);
 
-          console.log(JSON.stringify (filtered));
+          //console.log(JSON.stringify (filtered));
         showPokemons(filtered);
         selectOrder(filtered);
         calcSpawnChance(filtered);
@@ -85,8 +85,8 @@ function calcSpawnChance (filtered){
 
     let compute = window.allPokemon.computeStats(filtered);
     //document.getElementById('result').setAttribute("class","show");
-    document.getElementById('calculo').setAttribute('class','hidden');
-    document.getElementById('orderBy').setAttribute('class','hidden');
+    document.getElementById('calculo').setAttribute('class','display_none');
+    document.getElementById('orderBy').setAttribute('class','display_none');
 
        let result = compute.relatedPokemon;
        containerRoot.innerHTML=``;
