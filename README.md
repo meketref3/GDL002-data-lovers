@@ -5,7 +5,9 @@
 ---
 ![Data-Lovers](https://github.com/meketref3/GDL002-data-lovers-proyecto2/blob/master/src/imagenes/logo.png)
 
-## Resumen del proyecto
+
+## sketches
+![Data-Lovers](https://github.com/meketref3/GDL002-data-lovers-proyecto2/blob/master/src/imagenes/Sketches.png)
 
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
