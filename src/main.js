@@ -6,6 +6,7 @@ const data = window.POKEMON.pokemon;
 document.getElementById('buttonClear').classList.add('display_none');
 document.getElementById('welcomePage').classList.add('display_block');
 document.getElementById('orderBy').classList.add('display_none');
+document.getElementById('calculo').classList.add('display_none');
 
 //variable para imprimir las imagenes en la pantalla
 const containerRoot = document.getElementById('img');
@@ -13,7 +14,7 @@ const containerRoot = document.getElementById('img');
 
 let selectType = Array.from(document.getElementsByClassName('pokeType'));
 //-----------------------------filtara------------------------------------------
-    for (let i = 0; i <= selectType.length; i++) {
+    for (let i = 0; i < selectType.length; i++) {
     let buttonsArray= selectType[i];
        buttonsArray.addEventListener('click',()=>{
         document.getElementById('buttonsType').setAttribute("class","display_none");
@@ -23,6 +24,8 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 
         let condition = buttonsArray.value;
         let filtered = window.allPokemon.filterType(data, condition);
+
+          console.log(JSON.stringify (filtered));
         showPokemons(filtered);
         selectOrder(filtered);
         calcSpawnChance(filtered);
@@ -54,17 +57,47 @@ let selectType = Array.from(document.getElementsByClassName('pokeType'));
 
 }
 
+
+function card(element) {
+  return (`<div class="caja-pokemon">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="activator" src="${element.img}"/>
+                  <h1 class="activator"> ${element.name}</h1>
+                </div>
+                <div class="flip-card-back caja-pokemon">
+                  <h1 class="activator"> ${element.num}</h1>
+                  <p class="activator">  Eggs: ${element.egg}</p>
+                  <p class="activator"> Spawn Chance : ${element.spawn_chance}</p>
+                  <p class="activator"> Debilidades : ${element.weaknesses.join(" / ")}</p>
+                </div>
+              </div>
+            </div>
+          </div>`);
+}
+
 //--------------------------------------calculo/-----------------------------------------------------
 function calcSpawnChance (filtered){
   let calc = document.getElementById('calculo');
+
   calc.addEventListener('click',()=>{
-    let clearWindow = containerRoot.innerHTML = '';
 
     let compute = window.allPokemon.computeStats(filtered);
-    document.getElementById('result').setAttribute("class","show");
+    //document.getElementById('result').setAttribute("class","show");
     document.getElementById('calculo').setAttribute('class','hidden');
     document.getElementById('orderBy').setAttribute('class','hidden');
-    document.getElementById('spawnResult', 'result').innerHTML = compute;
+
+       let result = compute.relatedPokemon;
+       containerRoot.innerHTML=``;
+       containerRoot.innerHTML +=  `<div class="flip-card">
+             <div class="flip-card-front boxCompute caja-pokemon">
+               <h2>El Pokemon con mayor Spawn Chance de es te tipo ${result.type}</h2>
+               <img class="activator" src="${result.img}"/>
+               <h1 class="activator"> ${result.spawn_chance}</h1>
+
+             </div>`
+       //console.log(JSON.stringify (result));
     });
 }
 
@@ -77,28 +110,10 @@ function calcSpawnChance (filtered){
 function showPokemons (filtered){
    let result = "";
    containerRoot.innerHTML = '';
-   document.getElementById("calculo").setAttribute("class","show");
+   document.getElementById('calculo').classList.add('display_block');
 
-  filtered.forEach(element => {
-
-      result = containerRoot.innerHTML +=
-        `<div class="caja-pokemon">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-              <div class="flip-card-front">
-              <img class="activator" src="${element.img}">
-                <h1 class="activator"> ${element.name}</h1>
-              </div>
-           <div class="flip-card-back caja-pokemon">
-          <h1 class="activator"> ${element.num}</h1>
-          <p class="activator"> Candy : ${element.candy}</p>
-          <p class="activator"> Spawn Chance : ${element.spawn_chance}</p>
-          <p class="activator"> Debilidades : ${element.weaknesses.join(" / ")}</p>
-
-        </div>
-        </div>
-        </div>
-        </div>`;
-    });
-    return result;
+   filtered.forEach(element => {
+     result = containerRoot.innerHTML += card(element);
+   });
+   return result;
 }

@@ -41,7 +41,7 @@ describe('computeStats',()=>{
   it('is a function',()=>{
   expect(typeof window.allPokemon.computeStats).toBe('function');
   });
-  it ('should return the greatest spawn_chance of pokemon',()=>{
+  it ('should return the greatest spawn_chance of pokemon dragon',()=>{
     expect(typeof window.allPokemon.computeStats(pokemon.pokemon,'spawn_chance')).toEqual(computeStatsMock);
 
   });
