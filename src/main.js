@@ -91,7 +91,7 @@ function calcSpawnChance (filtered){
        let result = compute.relatedPokemon;
        containerRoot.innerHTML=``;
        containerRoot.innerHTML +=  `<div class="flip-card">
-             <div class="flip-card-front boxCompute caja-pokemon">
+             <div class="flip-card-front containingImg caja-pokemon">
                <h2>El Pokemon con mayor Spawn Chance de es te tipo ${result.type}</h2>
                <img class="activator" src="${result.img}"/>
                <h1 class="activator"> ${result.spawn_chance}</h1>
