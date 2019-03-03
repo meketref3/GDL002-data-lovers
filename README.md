@@ -5,14 +5,14 @@
 ---
 ![Data-Lovers](https://github.com/meketref3/GDL002-data-lovers-proyecto2/blob/master/src/imagenes/logo.png)
 
-##Definición de producto.
+## Definición de producto.
 Vamos dirigidos a un publico de 20 a 26 años de la ciudad de Guadalajara que juegan Pokémon Go como un pasatiempo. Tienen  la necesitad de conocer alguna información acerca de algún Pokemon de la primera generación de la región Kanto.
 
 ______
 ## sketches
 ![Data-Lovers](https://github.com/meketref3/GDL002-data-lovers-proyecto2/blob/master/src/imagenes/Sketches.png)
 
-###Historias de usuario
+### Historias de usuario
 
 
 Una vez que entiendas las necesidades de tu usuario, escribe las [Historias
