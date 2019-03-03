@@ -3,11 +3,7 @@
 
 
 ---
-
-## Preámbulo
-
-
-
+![Data-Lovers](https://github.com/meketref3/GDL002-data-lovers-proyecto2/blob/master/src/imagenes/logo.png)
 
 ## Resumen del proyecto
 
