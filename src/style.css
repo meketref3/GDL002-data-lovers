@@ -179,15 +179,14 @@ align-items: center;
 position:static;
 }
 
-@media(min-width:480px) and (max-width: 1199px){
+@media(min-width:300px) and (max-width: 1199px){
   .buttonSpawn{
      font-size: 60%;
      width: 13%;
   }
   .btn_reload{
-  width: auto;
   margin-top: 200%
-  bottom: 120px;
+  bottom: 220px;
   }
 
   .orderSelect {
